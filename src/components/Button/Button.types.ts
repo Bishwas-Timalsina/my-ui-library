@@ -1,24 +1,35 @@
-
 export type ButtonVariant =
     | "primary"
     | "secondary"
     | "ghost"
-    | "disabled"
-    | "loading"
+    | "outline"
+    | "link"
+    | "success"
+    | "warning"
     | "error";
-export type ButtonSize = "sm" | "md" | "lg" | "xl" | "xs";
 
+export type ButtonSize =
+    | "xs"
+    | "sm"
+    | "md"
+    | "lg"
+    | "xl";
 
-export interface ButtonProps {
-    label: string
-    onClick?: () => void;
-    icon?: React.ReactNode
-    className?: string;
-    type?: "button" | "submit" | "reset";
-    variant?: "primary" | "secondary" | "ghost" | "disabled" | "loading" | "error";
-    isLoading?: boolean;
+export interface ButtonProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    label?: string;
+    icon?: React.ReactNode;
+    variant?: ButtonVariant;
+    size?: ButtonSize;
     invert?: boolean;
-    textSize?: "xs" | "sm" | "md" | "lg" | "xl";
-    textWeight?: "light" | "normal" | "medium" | "semibold" | "bold";
-    disabled?: boolean;
+    fullWidth?: boolean;
+    rounded?: "none" | "sm" | "md" | "full";
+    isLoading?: boolean;
+    textSize?: ButtonSize;
+    textWeight?:
+    | "light"
+    | "normal"
+    | "medium"
+    | "semibold"
+    | "bold";
 }

@@ -1,67 +1,86 @@
 import { forwardRef } from "react";
-import { ButtonVariant } from "./Button.variant";
-import { clsx } from "clsx";
+import clsx from "clsx";
 
+import { ButtonVariant } from "./Button.variant";
 import type { ButtonProps } from "./Button.types";
+
 import Text from "../Text";
-// import { Loading } from "./Button.stories";
+import LoadingIcon from "../../assets/icons/loading.icon";
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (props, ref) => {
-    const {
+  (
+    {
       label,
-      onClick,
       icon,
+      onClick,
       className,
-      type = "button",
       variant = "primary",
+      size = "md",
+      fullWidth = false,
+      rounded = "md",
+      invert = false,
+      disabled = false,
       isLoading = false,
       textWeight = "normal",
-      invert = false,
       textSize = "md",
-    } = props;
-    const isDisabled = variant === "disabled" || isLoading;
+      type = "button",
+
+      ...props
+    },
+    ref,
+  ) => {
+    const isDisabled = disabled || isLoading;
 
     return (
       <button
         ref={ref}
-        onClick={!isDisabled && !isLoading ? onClick : undefined}
         type={type}
         disabled={isDisabled}
+        aria-disabled={isDisabled}
+        aria-busy={isLoading}
+        onClick={isDisabled ? undefined : onClick}
         className={ButtonVariant({
-          variant: isLoading ? "disabled" : variant,
-          className: clsx(
-            isDisabled ? "justify-between" : "justify-center",
-            className,
-            isDisabled ? "cursor-not-allowed" : "cursor-pointer",
-          ),
+          variant,
+          size,
+          fullWidth,
+          rounded,
+          loading: isLoading,
+          iconOnly: !label && !!icon,
+          className: clsx(className),
         })}
+        {...props}
       >
-        {invert && icon}
-        {label && (
-          <Text
-            size={textSize}
-            weight={textWeight}
-            variant={
-              variant === "secondary"
-                ? "link"
-                : variant === "disabled"
-                  ? "disabled"
-                  : variant === "error"
-                    ? "error"
-                    : variant === "ghost"
-                      ? "heading"
-                      : isLoading
-                        ? "disabled"
-                        : "reverse"
-            }
-            content={isLoading ? "Loading..." : label}
-          />
+        {isLoading ? (
+          <div className="flex flex-row justify-center items-center gap-2">
+            <LoadingIcon />
+            {label && (
+              <Text
+                content="Loading..."
+                size={textSize}
+                weight={textWeight}
+                variant={variant === "primary" ? "reverse" : "heading"}
+              />
+            )}
+          </div>
+        ) : (
+          <>
+            {invert && icon}
+
+            {label && (
+              <Text
+                content={label}
+                size={textSize}
+                weight={textWeight}
+                variant={variant === "primary" ? "reverse" : "heading"}
+              />
+            )}
+
+            {!invert && icon}
+          </>
         )}
-        {(!invert && icon && icon) || (isLoading && <p>Loading...</p>)}
       </button>
     );
   },
 );
+
 Button.displayName = "Button";
-// export default Button;
