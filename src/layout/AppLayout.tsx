@@ -12,6 +12,9 @@ import {
   ToggleLeftIcon,
   BadgeIcon,
   UserIcon,
+  DivideSquareIcon,
+  CircleIcon,
+  SquareIcon,
 } from "lucide-react";
 
 const menus = [
@@ -74,6 +77,21 @@ const menus = [
     name: "Avatar",
     icon: <UserIcon size={18} />,
     path: "/avatar-page",
+  },
+  {
+    name: "Divider",
+    icon: <DivideSquareIcon size={18} />,
+    path: "/divider-page",
+  },
+  {
+    name: "Spinner",
+    icon: <CircleIcon size={18} />,
+    path: "/spinner-page",
+  },
+  {
+    name: "Modal",
+    icon: <SquareIcon size={18} />,
+    path: "/modal-page",
   },
 ];
 

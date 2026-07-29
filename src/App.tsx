@@ -14,6 +14,9 @@ import RadioPage from "./pages/RadioPage";
 import SwitchPage from "./pages/SwitchPage";
 import BadgePage from "./pages/BadgePage";
 import AvatarPage from "./pages/AvatarPage";
+import DividerPage from "./pages/DividerPage";
+import SpinnerPage from "./pages/Spinnerpage";
+import ModalPage from "./pages/ModalPage";
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
         <Route path="/switch-page" element={<SwitchPage />} />
         <Route path="/badge-page" element={<BadgePage />} />
         <Route path="/avatar-page" element={<AvatarPage />} />
+        <Route path="/divider-page" element={<DividerPage />} />
+        <Route path="/spinner-page" element={<SpinnerPage />} />
+        <Route path="/modal-page" element={<ModalPage />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>

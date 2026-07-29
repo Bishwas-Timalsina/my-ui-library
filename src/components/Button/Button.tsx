@@ -5,7 +5,7 @@ import { ButtonVariant } from "./Button.variant";
 import type { ButtonProps } from "./Button.types";
 
 import Text from "../Text";
-import LoadingIcon from "../../assets/icons/loading.icon";
+import { Spinner } from "../Spinner";
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -52,7 +52,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {isLoading ? (
           <div className="flex flex-row justify-center items-center gap-2">
-            <LoadingIcon />
+            <Spinner variant="secondary" />
             {label && (
               <Text
                 content="Loading..."
