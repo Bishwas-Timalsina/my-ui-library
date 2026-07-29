@@ -4,6 +4,14 @@ import {
   MousePointerClick,
   RectangleHorizontal,
   TextIcon,
+  IdCardIcon,
+  CaseUpper,
+  BoxSelectIcon,
+  CheckIcon,
+  RadioIcon,
+  ToggleLeftIcon,
+  BadgeIcon,
+  UserIcon,
 } from "lucide-react";
 
 const menus = [
@@ -27,15 +35,54 @@ const menus = [
     icon: <TextIcon size={18} />,
     path: "/text-area",
   },
+  {
+    name: "Card",
+    icon: <IdCardIcon size={18} />,
+    path: "/card-page",
+  },
+  {
+    name: "Label",
+    icon: <CaseUpper size={18} />,
+    path: "/label-page",
+  },
+  {
+    name: "Select",
+    icon: <BoxSelectIcon size={18} />,
+    path: "/select-page",
+  },
+  {
+    name: "Checkbox",
+    icon: <CheckIcon size={18} />,
+    path: "/checkbox-page",
+  },
+  {
+    name: "Radio",
+    icon: <RadioIcon size={18} />,
+    path: "/radio-page",
+  },
+  {
+    name: "Switch",
+    icon: <ToggleLeftIcon size={18} />,
+    path: "/switch-page",
+  },
+  {
+    name: "Badge",
+    icon: <BadgeIcon size={18} />,
+    path: "/badge-page",
+  },
+  {
+    name: "Avatar",
+    icon: <UserIcon size={18} />,
+    path: "/avatar-page",
+  },
 ];
 
 const AppLayout = () => {
   return (
-    <div className="flex h-screen bg-bg-light">
-      <aside className="w-64 border-r border-border-default bg-white">
+    <div className="flex h-screen overflow-hidden bg-bg-light">
+      <aside className="w-64 shrink-0 overflow-y-auto border-r border-border-default bg-white">
         <div className="border-b border-border-default p-6">
           <h1 className="text-xl font-bold">UI Library</h1>
-
           <p className="text-sm text-text-muted">Component Showcase</p>
         </div>
 
@@ -60,7 +107,7 @@ const AppLayout = () => {
         </nav>
       </aside>
 
-      <main className="flex-1 overflow-auto bg-bg-light">
+      <main className="flex-1 overflow-y-auto bg-bg-light">
         <Outlet />
       </main>
     </div>
