@@ -11,6 +11,10 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y",
     "@storybook/addon-docs"
   ],
-  "framework": "@storybook/react-vite"
+  "framework": "@storybook/react-vite",
+  async viteFinal(config) {
+    config.base = "https://github.com/bishwas-timalsina/my-ui-library"
+    return config
+  }
 };
 export default config;
