@@ -1,0 +1,10 @@
+src
+.storybook
+stories
+node_modules
+tests
+*.test.ts
+*.stories.tsx
+vite.config.ts
+tsconfig*.json
+README-dev.md
