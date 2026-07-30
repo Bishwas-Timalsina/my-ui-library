@@ -11,6 +11,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "publish-branch": "development"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
