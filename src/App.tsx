@@ -17,6 +17,7 @@ import AvatarPage from "./pages/AvatarPage";
 import DividerPage from "./pages/DividerPage";
 import SpinnerPage from "./pages/Spinnerpage";
 import ModalPage from "./pages/ModalPage";
+import AlertPage from "./pages/AlertPage";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/divider-page" element={<DividerPage />} />
         <Route path="/spinner-page" element={<SpinnerPage />} />
         <Route path="/modal-page" element={<ModalPage />} />
+        <Route path="/alert-page" element={<AlertPage />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>

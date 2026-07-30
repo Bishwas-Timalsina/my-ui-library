@@ -15,6 +15,7 @@ import {
   DivideSquareIcon,
   CircleIcon,
   SquareIcon,
+  AlertCircleIcon,
 } from "lucide-react";
 
 const menus = [
@@ -92,6 +93,11 @@ const menus = [
     name: "Modal",
     icon: <SquareIcon size={18} />,
     path: "/modal-page",
+  },
+  {
+    name: "Alert",
+    icon: <AlertCircleIcon size={18} />,
+    path: "/alert-page",
   },
 ];
 

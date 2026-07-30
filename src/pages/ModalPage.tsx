@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { Modal } from "../components/Modal";
 
-import Button from "../components/Button";
+import { Button } from "../components/Button";
 
 const ModalPage = () => {
   const [basicOpen, setBasicOpen] = useState(false);
@@ -50,7 +50,7 @@ const ModalPage = () => {
             <>
               <Button
                 label="Cancel"
-                appearance="outline"
+                variant="outline"
                 onClick={() => setFooterOpen(false)}
               />
 
