@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { CircleAlert, CircleCheck, Info, Link2 } from "lucide-react";
 
-import Text from "./Text";
+import { Text } from "./Text";
 
 const meta = {
   title: "Components/Text",

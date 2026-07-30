@@ -1,6 +1,6 @@
 import { Eye, Mail, Search, User } from "lucide-react";
 
-import { Input } from "../components/Input";
+import { Input } from "../../components";
 
 const InputPage = () => {
   return (

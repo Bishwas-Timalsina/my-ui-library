@@ -1,23 +1,25 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-
-import ButtonPage from "./pages/Button";
-import TextPage from "./pages/TextPage";
-import InputPage from "./pages/InputPage";
-import NotFound from "./pages/NotFound";
-import AppLayout from "./layout/AppLayout";
-import TextAreaPage from "./pages/TextArea";
-import CardPage from "./pages/CardPage";
-import LabelPage from "./pages/LabelPage";
-import SelectPage from "./pages/SelectPage";
-import CheckboxPage from "./pages/CheckboxPage";
-import RadioPage from "./pages/RadioPage";
-import SwitchPage from "./pages/SwitchPage";
-import BadgePage from "./pages/BadgePage";
-import AvatarPage from "./pages/AvatarPage";
-import DividerPage from "./pages/DividerPage";
-import SpinnerPage from "./pages/Spinnerpage";
-import ModalPage from "./pages/ModalPage";
-import AlertPage from "./pages/AlertPage";
+import AppLayout from "../layout/AppLayout";
+import ButtonPage from "../Pages/Button";
+import TextPage from "../Pages/TextPage";
+import TextAreaPage from "../Pages/TextArea";
+import InputPage from "../Pages/InputPage";
+import CardPage from "../Pages/CardPage";
+import LabelPage from "../Pages/LabelPage";
+import SelectPage from "../Pages/SelectPage";
+import CheckboxPage from "../Pages/CheckboxPage";
+import RadioPage from "../Pages/RadioPage";
+import SwitchPage from "../Pages/SwitchPage";
+import BadgePage from "../Pages/BadgePage";
+import AvatarPage from "../Pages/AvatarPage";
+import DividerPage from "../Pages/DividerPage";
+import SpinnerPage from "../Pages/Spinnerpage";
+import ModalPage from "../Pages/ModalPage";
+import AlertPage from "../Pages/AlertPage";
+import TabsPage from "../Pages/TabsPage";
+import PaginationPage from "../Pages/PaginationPage";
+import TablePage from "../Pages/TablePage";
+import NotFound from "../Pages/NotFound";
 
 function App() {
   return (
@@ -40,6 +42,9 @@ function App() {
         <Route path="/spinner-page" element={<SpinnerPage />} />
         <Route path="/modal-page" element={<ModalPage />} />
         <Route path="/alert-page" element={<AlertPage />} />
+        <Route path="/tab-page" element={<TabsPage />} />
+        <Route path="/pagination-page" element={<PaginationPage />} />
+        <Route path="/table-page" element={<TablePage />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>

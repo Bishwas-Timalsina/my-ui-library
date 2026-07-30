@@ -1,10 +1,10 @@
-import React, { forwardRef } from "react";
 import clsx from "clsx";
+import { forwardRef } from "react";
 
-import { TextVariant } from "./Text.variant";
 import type { TextProps } from "./Text.types";
+import { TextVariant } from "./Text.variant";
 
-const Text = forwardRef<HTMLDivElement, TextProps>(
+export const Text = forwardRef<HTMLDivElement, TextProps>(
   (
     {
       children,
@@ -65,5 +65,3 @@ const Text = forwardRef<HTMLDivElement, TextProps>(
 );
 
 Text.displayName = "Text";
-
-export default Text;

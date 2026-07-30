@@ -1,16 +1,12 @@
 import { useState } from "react";
 
-import { Modal } from "../components/Modal";
-
-import { Button } from "../components/Button";
+import { Modal } from "../../components";
+import { Button } from "../../components";
 
 const ModalPage = () => {
   const [basicOpen, setBasicOpen] = useState(false);
-
   const [footerOpen, setFooterOpen] = useState(false);
-
   const [successOpen, setSuccessOpen] = useState(false);
-
   const [dangerOpen, setDangerOpen] = useState(false);
 
   return (

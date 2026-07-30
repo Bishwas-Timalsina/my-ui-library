@@ -15,17 +15,33 @@ const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(file
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   plugins: [react(), tailwindcss(), dts({
-    insertTypesEntry: true
+    insertTypesEntry: true,
+    include: ["src"],
+    tsconfigPath: "./tsconfig.build.json",
+    exclude: [
+      "**/*.stories.ts",
+      "**/*.stories.tsx",
+      "**/*.test.ts",
+      "**/*.test.tsx",
+      "src/docs/**"
+    ]
   })],
+  resolve: {
+    alias: {
+      "@": path.resolve(dirname, "./src")
+    }
+  },
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "MY-UI-Library",
-      fileName: "index",
+      fileName: (format) => `index.${format}.js`,
       formats: ["es", "umd"]
     },
+    sourcemap: true,
+    emptyOutDir: true,
     rolldownOptions: {
-      external: ["react", "react-dom"],
+      external: ["react", "react-dom", "react/jsx-runtime"],
       output: {
         globals: {
           react: "React",

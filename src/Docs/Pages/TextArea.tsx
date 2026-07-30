@@ -1,6 +1,5 @@
 import { Mail, MessageSquare, Search } from "lucide-react";
-
-import TextArea from "../components/TextArea";
+import { TextArea } from "../../components";
 
 const TextAreaPage = () => {
   return (

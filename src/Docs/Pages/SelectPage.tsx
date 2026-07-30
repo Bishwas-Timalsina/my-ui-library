@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Select } from "../components/Select";
+import { Select } from "../../components";
 
 const options = [
   { label: "Nepal", value: "np" },

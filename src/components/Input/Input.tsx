@@ -4,7 +4,7 @@ import clsx from "clsx";
 import type { InputProps } from "./Input.types";
 import { InputVariant } from "./Input.variant";
 
-import Text from "../Text";
+import { Text } from "../Text";
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   (

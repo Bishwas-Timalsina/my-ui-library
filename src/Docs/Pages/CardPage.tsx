@@ -1,5 +1,5 @@
-import { Card } from "../components/Card/Card";
-import Text from "../components/Text";
+import { Card } from "../../components";
+import { Text } from "../../components/Text";
 
 const CardPage = () => {
   return (

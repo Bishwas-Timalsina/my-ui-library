@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Switch } from "../components/Switch";
+import { Switch } from "../../components";
 
 const SwitchPage = () => {
   const [notifications, setNotifications] = useState(true);

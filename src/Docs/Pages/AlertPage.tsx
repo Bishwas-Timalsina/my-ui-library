@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { RefreshCcw, Shield } from "lucide-react";
-
-import { Button } from "../components/Button";
-import { Alert } from "../components/Alert/Alert";
+import { Alert, Button } from "../../components";
 
 const AlertPage = () => {
   const [showDismissible, setShowDismissible] = useState(true);

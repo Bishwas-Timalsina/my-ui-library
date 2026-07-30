@@ -8,7 +8,7 @@ import {
   X,
 } from "lucide-react";
 
-import Text from "../Text";
+import { Text } from "../Text";
 
 import { AlertVariant } from "./Alert.variant";
 import type { AlertProps } from "./Alert.types";

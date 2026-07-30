@@ -1,6 +1,5 @@
 import { Mail, AlertCircle, CheckCircle, ExternalLink } from "lucide-react";
-
-import Text from "../components/Text";
+import { Text } from "../../components";
 
 const TextPage = () => {
   return (

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Mail, Search } from "lucide-react";
 
-import TextArea from "./TextArea";
+import { TextArea } from "./TextArea";
 
 const meta = {
   title: "Components/TextArea",

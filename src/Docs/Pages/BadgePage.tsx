@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Atom, CheckCircle, Tag } from "lucide-react";
-import { Badge } from "../components/Badge";
+import { Badge } from "../../components";
 
 const BadgePage = () => {
   const [badges, setBadges] = useState(["React", "TypeScript", "Tailwind CSS"]);

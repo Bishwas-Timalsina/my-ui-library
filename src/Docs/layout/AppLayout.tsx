@@ -16,6 +16,9 @@ import {
   CircleIcon,
   SquareIcon,
   AlertCircleIcon,
+  TabletsIcon,
+  Columns2,
+  TableIcon,
 } from "lucide-react";
 
 const menus = [
@@ -98,6 +101,21 @@ const menus = [
     name: "Alert",
     icon: <AlertCircleIcon size={18} />,
     path: "/alert-page",
+  },
+  {
+    name: "Tabs",
+    icon: <TabletsIcon size={18} />,
+    path: "/tab-page",
+  },
+  {
+    name: "Pagination",
+    icon: <Columns2 size={18} />,
+    path: "/pagination-page",
+  },
+  {
+    name: "Table",
+    icon: <TableIcon size={18} />,
+    path: "/table-page",
   },
 ];
 

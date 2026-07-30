@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Radio } from "../components/Radio";
+import { Radio } from "../../components";
 
 const RadioPage = () => {
   const [framework, setFramework] = useState("react");
@@ -72,7 +72,7 @@ const RadioPage = () => {
             name="framework"
             value="react"
             checked={framework === "react"}
-            // onChange={() => setFramework("react")}
+            onChange={() => setFramework("react")}
           />
 
           <Radio
@@ -80,7 +80,7 @@ const RadioPage = () => {
             name="framework"
             value="vue"
             checked={framework === "vue"}
-            // onChange={() => setFramework("vue")}
+            onChange={() => setFramework("vue")}
           />
 
           <Radio
@@ -88,7 +88,7 @@ const RadioPage = () => {
             name="framework"
             value="angular"
             checked={framework === "angular"}
-            // onChange={() => setFramework("angular")}
+            onChange={() => setFramework("angular")}
           />
 
           <Radio
@@ -96,7 +96,7 @@ const RadioPage = () => {
             name="framework"
             value="svelte"
             checked={framework === "svelte"}
-            // onChange={() => setFramework("svelte")}
+            onChange={() => setFramework("svelte")}
           />
         </div>
 
@@ -126,7 +126,7 @@ const RadioPage = () => {
             name="theme"
             value="light"
             checked={theme === "light"}
-            // onChange={() => setTheme("light")}
+            onChange={() => setTheme("light")}
           />
 
           <Radio
@@ -134,7 +134,7 @@ const RadioPage = () => {
             name="theme"
             value="dark"
             checked={theme === "dark"}
-            // onChange={() => setTheme("dark")}
+            onChange={() => setTheme("dark")}
           />
 
           <Radio
@@ -142,7 +142,7 @@ const RadioPage = () => {
             name="theme"
             value="system"
             checked={theme === "system"}
-            // onChange={() => setTheme("system")}
+            onChange={() => setTheme("system")}
           />
         </div>
 

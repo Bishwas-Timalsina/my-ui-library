@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { ButtonVariant } from "./Button.variant";
 import type { ButtonProps } from "./Button.types";
 
-import Text from "../Text";
+import { Text } from "../Text";
 import { Spinner } from "../Spinner";
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(

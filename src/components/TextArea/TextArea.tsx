@@ -1,12 +1,11 @@
 import { forwardRef } from "react";
 import clsx from "clsx";
 
-import Text from "../Text";
-
 import { TextAreaVariant } from "./TextArea.variant";
 import type { TextAreaProps } from "./TextArea.types";
+import { Text } from "../Text/Text";
 
-const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
+export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   (
     {
       label,
@@ -85,5 +84,3 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 );
 
 TextArea.displayName = "TextArea";
-
-export default TextArea;

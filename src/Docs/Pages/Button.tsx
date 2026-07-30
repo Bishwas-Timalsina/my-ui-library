@@ -1,5 +1,6 @@
 import { Edit, Plus, Search, Trash2 } from "lucide-react";
-import { Button } from "../components/Button";
+import { Button } from "../../components";
+
 const ButtonPage = () => {
   return (
     <div className="p-8 space-y-6 max-w-4xl">
