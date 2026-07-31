@@ -1,6 +1,6 @@
 {
   "name": "@bishwas-timalsina/my-ui-library",
-  "version": "1.0.0",
+  "version": "1.0.01",
   "description": "A reusable React UI component library built with React, TypeScript, Tailwind CSS, and Vite.",
   "license": "MIT",
   "type": "module",
